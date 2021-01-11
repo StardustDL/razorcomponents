@@ -7,7 +7,7 @@ Task default -depends Restore, Build
 
 Task CI -depends Restore, Build, Pack, Test, Benchmark, Report
 
-Task CD -depends Restore, Build, Pack, Deploy
+Task CD -depends Restore, Build, Pack
 
 Task Deploy -depends publish-packages
 

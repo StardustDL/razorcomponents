@@ -11,7 +11,7 @@ defaults:
 env:
   dotnet-version: "5.0.x"
   node-version: "12.x"
-  build_version: "0.0.1-preview.${{ github.run_number }}"
+  build_version: "0.0.1-alpha.${{ github.run_number }}"
 
 jobs:
   ci:
@@ -27,14 +27,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.dotnet-version }}
-    - name: Setup dotnet
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: "3.1.x"
-    - name: Setup dotnet
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: "2.1.x"
     - name: Setup NodeJS
       uses: actions/setup-node@v2
       with:
@@ -48,13 +40,43 @@ jobs:
     #   with:
     #     name: ci-${{ matrix.os }}
     #     path: ./reports
-  invoke-cd:
+  deploy:
     needs: ci
-    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' && ! startsWith(github.event.head_commit.message, 'docs:') }}
+    runs-on: ubuntu-18.04
     steps:
-    - name: CD
-      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
-      uses: peter-evans/repository-dispatch@v1
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v1
       with:
+        dotnet-version: ${{ env.dotnet-version }}
+    - name: Setup NodeJS
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ env.node-version }}
+    - name: Setup psake
+      run: Set-PSRepository -Name PSGallery -InstallationPolicy Trusted; Install-Module -Name psake
+    - name: Build and Deploy packages
+      run: Invoke-psake cd
+    - name: Upload package artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: packages
+        path: ./packages
+    - name: Upload to Azure packages
+      env:
+        NUGET_AUTH_TOKEN: ${{ secrets.AZ_TOKEN }}
+      run: Invoke-psake publish-packages
+  invoke-cd:
+    needs: deploy
+    runs-on: ubuntu-latest
+    env:
+      RELEASE: ${{ format('{0}', startsWith(github.event.head_commit.message, 'release:')) }}
+    steps:
+    - name: Invoke CD workflow
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: CD
         token: ${{ secrets.PA_TOKEN }}
-        event-type: cd
+        inputs: '{ "pkg": "${{ env.RELEASE }}", "image": "${{ env.RELEASE }}" }'

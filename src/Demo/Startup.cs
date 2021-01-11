@@ -34,7 +34,7 @@ namespace Demo
             var builder = ModuleHostBuilder.CreateDefaultBuilder()
                 .AddRazorComponentClientModules((o, _) =>
                 {
-                    o.Validation = false;
+                    o.Validation = true;
                 })
                 .AddAntDesignModule();
             builder.Build(services);
