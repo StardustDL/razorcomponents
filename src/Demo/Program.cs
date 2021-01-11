@@ -1,4 +1,4 @@
-using Delights.Modules;
+using Modulight.Modules;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;

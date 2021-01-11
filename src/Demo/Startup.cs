@@ -1,5 +1,5 @@
-using Delights.Modules;
-using Delights.Modules.Client.RazorComponents;
+using Modulight.Modules;
+using Modulight.Modules.Client.RazorComponents;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;

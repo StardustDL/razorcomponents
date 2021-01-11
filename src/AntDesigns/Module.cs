@@ -1,12 +1,12 @@
 ﻿using System;
-using Delights.Modules;
-using Delights.Modules.Services;
-using Delights.Modules.Options;
-using Delights.Modules.Client.RazorComponents;
+using Modulight.Modules;
+using Modulight.Modules.Services;
+using Modulight.Modules.Options;
+using Modulight.Modules.Client.RazorComponents;
 using Microsoft.JSInterop;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Components;
-using Delights.Modules.Client.RazorComponents.UI;
+using Modulight.Modules.Client.RazorComponents.UI;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace StardustDL.RazorComponents.AntDesigns
@@ -41,9 +41,9 @@ namespace StardustDL.RazorComponents.AntDesigns
         }
     }
 
-    public class ModuleUI : Delights.Modules.Client.RazorComponents.UI.ModuleUI
+    public class ModuleUI : Modulight.Modules.Client.RazorComponents.UI.ModuleUI
     {
-        public ModuleUI(IJSRuntime jsRuntime, ILogger<Delights.Modules.Client.RazorComponents.UI.ModuleUI> logger) : base(jsRuntime, logger)
+        public ModuleUI(IJSRuntime jsRuntime, ILogger<Modulight.Modules.Client.RazorComponents.UI.ModuleUI> logger) : base(jsRuntime, logger)
         {
             Resources = new UIResource[]
             {
@@ -52,7 +52,7 @@ namespace StardustDL.RazorComponents.AntDesigns
             };
         }
 
-        public override RenderFragment Icon => Fragments.Icon;
+        public override RenderFragment Icon => Components.Fragments.Icon;
     }
 
     public class ModuleOption
