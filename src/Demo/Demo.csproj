@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AntDesign" Version="0.5.2" />
+    <PackageReference Include="Delights.Modules.Client.RazorComponents" Version="0.0.1-preview.19" />
+    <PackageReference Include="StardustDL.RazorComponents.MaterialDesignIcons" Version="0.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web.Extensions" Version="5.0.0-preview9.20513.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AntDesigns\AntDesigns.csproj" />
+  </ItemGroup>
+
+</Project>

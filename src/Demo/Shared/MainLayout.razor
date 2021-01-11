@@ -1,0 +1,26 @@
+﻿@inherits LayoutComponentBase
+@inject IModuleHost ModuleHost
+@inject IServiceProvider ServiceProvider
+
+<AntDesign.Layout Style="min-height: 100vh; background: initial;">
+    <Sider Collapsible Theme="SiderTheme.Light" Breakpoint="BreakpointType.Xl" CollapsedWidth="0">
+        <Menu Mode="MenuMode.Inline" Theme="MenuTheme.Light">
+            <MenuItem Class="text-center p-0">
+                Delights
+            </MenuItem>
+            @foreach (var module in ModuleHost.Modules.AllSpecifyModules<IRazorComponentClientModule>())
+            {
+                var ui = module.GetUI(ServiceProvider);
+                <MenuItem>
+                    <ModuleIcon Module="module" Fallback="@Fragments.DefaultModuleIcon"></ModuleIcon>
+                    <MenuLink href="@module.Manifest.Name">@module.Manifest.DisplayName</MenuLink>
+                </MenuItem>
+            }
+        </Menu>
+    </Sider>
+    <AntDesign.Layout Style="background: initial;">
+        <Content>@Body</Content>
+    </AntDesign.Layout>
+</AntDesign.Layout>
+
+<BackTop></BackTop>

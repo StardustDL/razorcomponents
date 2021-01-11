@@ -1,0 +1,29 @@
+@using System.Reflection
+@inject Delights.Modules.Client.RazorComponents.Core.ModuleService ClientService
+
+<Router AppAssembly="@typeof(App).Assembly" PreferExactMatches="@true" AdditionalAssemblies="@AdditionalAssemblies" OnNavigateAsync="@OnNavigateAsync">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(ModulePageLayout)" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p>Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+<AntContainer />
+
+@code {
+    List<Assembly> AdditionalAssemblies = new List<Assembly>();
+
+    protected async Task OnNavigateAsync(NavigationContext context)
+    {
+        AdditionalAssemblies.Clear();
+
+        var current = typeof(App).Assembly;
+
+        var results = await ClientService.GetAssembliesForRouting(context.Path, context.CancellationToken);
+        AdditionalAssemblies.AddRange(results.Where(x => x != current));
+    }
+}

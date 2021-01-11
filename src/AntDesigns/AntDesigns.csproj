@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>StardustDL.RazorComponents.AntDesigns</RootNamespace>
+    <AssemblyName>StardustDL.RazorComponents.AntDesigns</AssemblyName>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <Authors>StardustDL</Authors>
+    <Description>Wrapper for AntDesign Blazor</Description>
+    <PackageProjectUrl>https://github.com/StardustDL/delights</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/StardustDL/delights</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AntDesign" Version="0.5.2" />
+    <PackageReference Include="Delights.Modules.Client.RazorComponents" Version="0.0.1-preview.19" />
+  </ItemGroup>
+
+</Project>
