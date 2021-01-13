@@ -72,11 +72,11 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     env:
-      RELEASE: ${{ format('{0}', startsWith(github.event.head_commit.message, 'release:')) }}
+      PKG: ${{ format('{0}', contains(github.event.head_commit.message, '/pkg')) }}
     steps:
     - name: Invoke CD workflow
       uses: benc-uk/workflow-dispatch@v1
       with:
         workflow: CD
         token: ${{ secrets.PA_TOKEN }}
-        inputs: '{ "pkg": "${{ env.RELEASE }}", "image": "${{ env.RELEASE }}" }'
+        inputs: '{ "pkg": "${{ env.PKG }}" }'

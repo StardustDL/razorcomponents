@@ -1,19 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>StardustDL.RazorComponents.AntDesigns</RootNamespace>
-    <AssemblyName>StardustDL.RazorComponents.AntDesigns</AssemblyName>
-    <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Nullable>enable</Nullable>
     <Authors>StardustDL</Authors>
     <Company></Company>
     <Copyright>StardustDL</Copyright>
-    <Description>Wrapper for AntDesign Blazor.</Description>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/StardustDL/razorcomponents</PackageProjectUrl>
     <RepositoryUrl>https://github.com/StardustDL/razorcomponents</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
+    <PackageId>StardustDL.RazorComponents.MaterialDesignIcons</PackageId>
+    <Product>StardustDL.RazorComponents.MaterialDesignIcons</Product>
+    <Description>Material Design Icons for Blazor, Razor Pages and so on.</Description>
+    <RootNamespace>StardustDL.RazorComponents.MaterialDesignIcons</RootNamespace>
+    <AssemblyName>StardustDL.RazorComponents.MaterialDesignIcons</AssemblyName>
+    <PackageTags>blazor;component-library;razor-components;icons;google-material;material-design;webfonts;razor</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,8 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AntDesign" Version="0.5.3" />
     <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.1-preview.30" />
   </ItemGroup>
-
 </Project>

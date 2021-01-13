@@ -1,0 +1,27 @@
+{
+  "name": "stardustdl.razorcomponents.materialdesignicons",
+  "version": "1.0.0",
+  "description": "Material Design Icons for Blazor, Razor Pages and so on.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "StardustDL",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@mdi/font": "^5.8.55"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "browserify": "^17.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulplog": "^1.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

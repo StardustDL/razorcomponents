@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using StardustDL.RazorComponents.MaterialDesignIcons;
 
 namespace Demo
 {
@@ -32,11 +33,9 @@ namespace Demo
             services.AddServerSideBlazor();
 
             var builder = ModuleHostBuilder.CreateDefaultBuilder()
-                .AddRazorComponentClientModules((o, _) =>
-                {
-                    o.Validation = true;
-                })
-                .AddAntDesignModule();
+                .UseRazorComponentClientModules()
+                .AddAntDesignModule()
+                .AddMaterialDesignIconModule();
             builder.Build(services);
         }
 
