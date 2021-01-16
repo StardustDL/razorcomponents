@@ -9,11 +9,11 @@ using Microsoft.AspNetCore.Components;
 using Modulight.Modules.Client.RazorComponents.UI;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace StardustDL.RazorComponents.MaterialDesignIcons
+namespace StardustDL.RazorComponents.Vditors
 {
     public static class ModuleExtensions
     {
-        public static IModuleHostBuilder AddMaterialDesignIconModule(this IModuleHostBuilder modules, Action<ModuleOption>? setupOptions = null, Action<ModuleOption, IServiceProvider>? configureOptions = null)
+        public static IModuleHostBuilder AddVditorModule(this IModuleHostBuilder modules, Action<ModuleOption>? setupOptions = null, Action<ModuleOption, IServiceProvider>? configureOptions = null)
         {
             modules.TryAddModule<Module, ModuleOption>(setupOptions, configureOptions);
             return modules;
@@ -26,11 +26,11 @@ namespace StardustDL.RazorComponents.MaterialDesignIcons
         {
             Manifest = Manifest with
             {
-                Name = "MaterialDesignIcons",
-                DisplayName = "Material Design Icons",
-                Description = "Material Design Icon Razor components.",
-                Url = "https://materialdesignicons.com/",
-                Author = "Austin Andrews",
+                Name = "Vditor",
+                DisplayName = "Vditor",
+                Description = "Vditor Razor components.",
+                Url = "https://b3log.org/vditor/",
+                Author = "B3log",
             };
         }
     }
@@ -41,7 +41,9 @@ namespace StardustDL.RazorComponents.MaterialDesignIcons
         {
             Resources = new UIResource[]
             {
-                new UIResource(UIResourceType.StyleSheet,"_content/StardustDL.RazorComponents.MaterialDesignIcons/mdi/css/materialdesignicons.min.css"),
+                new UIResource(UIResourceType.StyleSheet,"https://cdn.jsdelivr.net/npm/vditor@3.4.7/dist/index.css"),
+                new UIResource(UIResourceType.Script,"https://cdn.jsdelivr.net/npm/vditor@3.4.7/dist/index.min.js"),
+                new UIResource(UIResourceType.Script, "_content/Vditor/vditor-blazor.js"),
             };
         }
 

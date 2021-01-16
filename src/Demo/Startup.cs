@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using StardustDL.RazorComponents.MaterialDesignIcons;
+using StardustDL.RazorComponents.Vditors;
 
 namespace Demo
 {
@@ -35,7 +36,8 @@ namespace Demo
             var builder = ModuleHostBuilder.CreateDefaultBuilder()
                 .UseRazorComponentClientModules()
                 .AddAntDesignModule()
-                .AddMaterialDesignIconModule();
+                .AddMaterialDesignIconModule()
+                .AddVditorModule();
             builder.Build(services);
         }
 

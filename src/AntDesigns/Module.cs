@@ -13,9 +13,9 @@ namespace StardustDL.RazorComponents.AntDesigns
 {
     public static class ModuleExtensions
     {
-        public static IModuleHostBuilder AddAntDesignModule(this IModuleHostBuilder modules, Action<ModuleOption, IServiceProvider>? configureOptions = null)
+        public static IModuleHostBuilder AddAntDesignModule(this IModuleHostBuilder modules, Action<ModuleOption>? setupOptions = null, Action<ModuleOption, IServiceProvider>? configureOptions = null)
         {
-            modules.TryAddModule<Module, ModuleOption>(configureOptions);
+            modules.TryAddModule<Module, ModuleOption>(setupOptions, configureOptions);
             return modules;
         }
     }
@@ -27,7 +27,7 @@ namespace StardustDL.RazorComponents.AntDesigns
             Manifest = Manifest with
             {
                 Name = "AntDesign",
-                DisplayName = "AntDesign Razor Components",
+                DisplayName = "AntDesign",
                 Description = "AntDesign Razor components.",
                 Url = "https://github.com/ant-design-blazor/ant-design-blazor",
                 Author = "ant-design-blazor",

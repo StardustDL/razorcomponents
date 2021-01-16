@@ -8,6 +8,9 @@
             <MenuItem Class="text-center p-0">
                 Delights
             </MenuItem>
+            <MenuItem Class="text-center p-0">
+                <MenuLink href="preview/vditor">Vditor</MenuLink>
+            </MenuItem>
             @foreach (var module in ModuleHost.Modules.AllSpecifyModules<IRazorComponentClientModule>())
             {
                 var ui = module.GetUI(ServiceProvider);
