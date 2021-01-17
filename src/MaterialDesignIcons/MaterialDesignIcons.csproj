@@ -12,6 +12,7 @@
     <PackageProjectUrl>https://github.com/StardustDL/razorcomponents</PackageProjectUrl>
     <RepositoryUrl>https://github.com/StardustDL/razorcomponents</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>StardustDL.RazorComponents.MaterialDesignIcons</PackageId>
     <Product>StardustDL.RazorComponents.MaterialDesignIcons</Product>
     <Description>Material Design Icons for Blazor, Razor Pages and so on.</Description>
@@ -25,6 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.2-preview.34" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.2-preview.36" />
   </ItemGroup>
 </Project>

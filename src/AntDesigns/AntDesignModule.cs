@@ -11,29 +11,39 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace StardustDL.RazorComponents.AntDesigns
 {
+    /// <summary>
+    /// Extensions for Ant Design module.
+    /// </summary>
     public static class ModuleExtensions
     {
+        /// <summary>
+        /// Add <see cref="AntDesignModule"/>.
+        /// </summary>
+        /// <param name="modules"></param>
+        /// <param name="setupOptions"></param>
+        /// <param name="configureOptions"></param>
+        /// <returns></returns>
         public static IModuleHostBuilder AddAntDesignModule(this IModuleHostBuilder modules, Action<ModuleOption>? setupOptions = null, Action<ModuleOption, IServiceProvider>? configureOptions = null)
         {
-            modules.TryAddModule<Module, ModuleOption>(setupOptions, configureOptions);
+            modules.TryAddModule<AntDesignModule, ModuleOption>(setupOptions, configureOptions);
             return modules;
         }
     }
 
-    public class Module : RazorComponentClientModule<ModuleService, ModuleOption, ModuleUI>
+    /// <summary>
+    /// Provide Ant Design razor components.
+    /// </summary>
+    [Module(Description = "AntDesign Razor components.", Url = "https://github.com/ant-design-blazor/ant-design-blazor", Author = "ant-design-blazor")]
+    public class AntDesignModule : RazorComponentClientModule<ModuleService, ModuleOption, ModuleUI>
     {
-        public Module() : base()
+        /// <summary>
+        /// Create the instance.
+        /// </summary>
+        public AntDesignModule() : base()
         {
-            Manifest = Manifest with
-            {
-                Name = "AntDesign",
-                DisplayName = "AntDesign",
-                Description = "AntDesign Razor components.",
-                Url = "https://github.com/ant-design-blazor/ant-design-blazor",
-                Author = "ant-design-blazor",
-            };
         }
 
+        /// <inheritdoc/>
         public override void RegisterUI(IServiceCollection services)
         {
             base.RegisterUI(services);
@@ -41,8 +51,16 @@ namespace StardustDL.RazorComponents.AntDesigns
         }
     }
 
+    /// <summary>
+    /// UI for <see cref="AntDesignModule"/>.
+    /// </summary>
     public class ModuleUI : Modulight.Modules.Client.RazorComponents.UI.ModuleUI
     {
+        /// <summary>
+        /// Create the instance.
+        /// </summary>
+        /// <param name="jsRuntime"></param>
+        /// <param name="logger"></param>
         public ModuleUI(IJSRuntime jsRuntime, ILogger<Modulight.Modules.Client.RazorComponents.UI.ModuleUI> logger) : base(jsRuntime, logger)
         {
             Resources = new UIResource[]
@@ -52,14 +70,21 @@ namespace StardustDL.RazorComponents.AntDesigns
             };
         }
 
+        /// <inheritdoc/>
         public override RenderFragment Icon => Components.Fragments.Icon;
     }
 
+    /// <summary>
+    /// Options for <see cref="AntDesignModule"/>.
+    /// </summary>
     public class ModuleOption
     {
 
     }
 
+    /// <summary>
+    /// Services for <see cref="AntDesignModule"/>.
+    /// </summary>
     public class ModuleService : IModuleService
     {
 

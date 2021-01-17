@@ -7,6 +7,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>StardustDL</Authors>
     <Company></Company>
     <Copyright>StardustDL</Copyright>
@@ -21,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.2-preview.34" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.2-preview.36" />
     <PackageReference Include="Vditor" Version="0.1.0-nightly-201209082656" />
   </ItemGroup>
 

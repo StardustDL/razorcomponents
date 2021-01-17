@@ -75,7 +75,7 @@ jobs:
       PKG: ${{ format('{0}', contains(github.event.head_commit.message, '/pkg')) }}
     steps:
     - name: Invoke CD workflow
-      if: ${{ env.PKG }}
+      if: ${{ env.PKG  == 'true' }}
       uses: benc-uk/workflow-dispatch@v1
       with:
         workflow: CD
