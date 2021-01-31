@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using StardustDL.RazorComponents.MaterialDesignIcons;
 using StardustDL.RazorComponents.Vditors;
+using Modulight.Modules.Hosting;
 
 namespace Demo
 {
