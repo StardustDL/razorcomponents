@@ -16,7 +16,7 @@ namespace StardustDL.RazorComponents.MaterialDesignIcons
     public static class ModuleExtensions
     {
         /// <summary>
-        /// Add 
+        /// Add <see cref=" MaterialDesignIconModule"/>.
         /// </summary>
         /// <param name="modules"></param>
         /// <returns></returns>
@@ -26,22 +26,16 @@ namespace StardustDL.RazorComponents.MaterialDesignIcons
     /// <summary>
     /// Provide Material Design Icon razor components.
     /// </summary>
-    [Module(Description = "Material Design Icon Razor components.", Url = "https://materialdesignicons.com/", Author = "Austin Andrews")]
-    [ModuleUI(typeof(ModuleUI))]
+    [Module(Description = "Material Design Icon Razor components.", Url = "https://materialdesignicons.com/", Author = "Austin Andrews", Version = "5.9.55")]
+    [ModuleUIResource(UIResourceType.StyleSheet, "_content/StardustDL.RazorComponents.MaterialDesignIcons/mdi/css/materialdesignicons.min.css")]
     public class MaterialDesignIconModule : RazorComponentClientModule<MaterialDesignIconModule>
     {
+        /// <inheritdoc/>
         public MaterialDesignIconModule(IModuleHost host) : base(host)
         {
         }
-    }
 
-    [ModuleUIResource(UIResourceType.StyleSheet, "_content/StardustDL.RazorComponents.MaterialDesignIcons/mdi/css/materialdesignicons.min.css")]
-    class ModuleUI : Modulight.Modules.Client.RazorComponents.UI.ModuleUI
-    {
-        public ModuleUI(IJSRuntime jsRuntime, ILogger<ModuleUI> logger) : base(jsRuntime, logger)
-        {
-        }
-
+        /// <inheritdoc/>
         public override RenderFragment Icon => Components.Fragments.Icon;
     }
 }

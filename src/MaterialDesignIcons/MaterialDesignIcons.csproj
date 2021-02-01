@@ -26,6 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.3-preview.37" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.3-preview.38" />
   </ItemGroup>
 </Project>
