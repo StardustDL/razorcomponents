@@ -30,7 +30,7 @@ namespace StardustDL.RazorComponents.Vditors
     [ModuleUIResource(UIResourceType.StyleSheet, "https://cdn.jsdelivr.net/npm/vditor@3.8.0/dist/index.css")]
     [ModuleUIResource(UIResourceType.Script, "https://cdn.jsdelivr.net/npm/vditor@3.8.0/dist/index.min.js")]
     [ModuleUIResource(UIResourceType.Script, "_content/Vditor/vditor-blazor.js")]
-    public class VditorModule : RazorComponentClientModule<VditorModule>
+    public class VditorModule : RazorComponentClientModule
     {
         /// <inheritdoc/>
         public VditorModule(IModuleHost host) : base(host)

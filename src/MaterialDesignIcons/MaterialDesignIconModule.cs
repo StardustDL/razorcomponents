@@ -28,7 +28,7 @@ namespace StardustDL.RazorComponents.MaterialDesignIcons
     /// </summary>
     [Module(Description = "Material Design Icon Razor components.", Url = "https://materialdesignicons.com/", Author = "Austin Andrews", Version = "5.9.55")]
     [ModuleUIResource(UIResourceType.StyleSheet, "_content/StardustDL.RazorComponents.MaterialDesignIcons/mdi/css/materialdesignicons.min.css")]
-    public class MaterialDesignIconModule : RazorComponentClientModule<MaterialDesignIconModule>
+    public class MaterialDesignIconModule : RazorComponentClientModule
     {
         /// <inheritdoc/>
         public MaterialDesignIconModule(IModuleHost host) : base(host)
