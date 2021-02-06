@@ -66,6 +66,9 @@ Task NPMUP? {
     Set-Location src/MaterialDesignIcons
     Exec { ncu }
     Set-Location ../..
+    Set-Location src/Vditors
+    Exec { ncu }
+    Set-Location ../..
 }
 
 Task NPMUP {
@@ -73,10 +76,18 @@ Task NPMUP {
     Exec { ncu -u }
     Exec { npm i }
     Set-Location ../..
+    Set-Location src/Vditors
+    Exec { ncu -u }
+    Exec { npm i }
+    Set-Location ../..
 }
 
 Task Restore-UI {
     Set-Location src/MaterialDesignIcons
+    Exec { npm ci }
+    Exec { gulp }
+    Set-Location ../..
+    Set-Location src/Vditors
     Exec { npm ci }
     Exec { gulp }
     Set-Location ../..

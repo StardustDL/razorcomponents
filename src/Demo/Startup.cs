@@ -35,7 +35,6 @@ namespace Demo
             services.AddServerSideBlazor();
 
             var builder = ModuleHostBuilder.CreateDefaultBuilder()
-                .UseRazorComponentClientModules()
                 .AddAntDesignModule()
                 .AddMaterialDesignIconModule()
                 .AddVditorModule();
