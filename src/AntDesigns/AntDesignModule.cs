@@ -30,6 +30,7 @@ namespace StardustDL.RazorComponents.AntDesigns
     [ModuleStartup(typeof(Startup))]
     [ModuleUIResource(UIResourceType.Script, "_content/AntDesign/js/ant-design-blazor.js")]
     [ModuleUIResource(UIResourceType.StyleSheet, "_content/AntDesign/css/ant-design-blazor.css")]
+    [ModuleUIGlobalComponent(typeof(AntDesign.AntContainer))]
     public class AntDesignModule : RazorComponentClientModule
     {
         /// <inheritdoc/>

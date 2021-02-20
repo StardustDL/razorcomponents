@@ -34,11 +34,12 @@ namespace Demo
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            var builder = ModuleHostBuilder.CreateDefaultBuilder()
-                .AddAntDesignModule()
-                .AddMaterialDesignIconModule()
-                .AddVditorModule();
-            builder.Build(services);
+            services.AddModules(builder =>
+            {
+                builder.AddAntDesignModule()
+                    .AddMaterialDesignIconModule()
+                    .AddVditorModule();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
