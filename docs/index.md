@@ -1,1 +1,1 @@
-# Modulight
+# StardustDL.RazorComponents

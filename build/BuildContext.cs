@@ -29,7 +29,7 @@ namespace Build
 
         public string BuildConfiguration { get; set; }
 
-        public string BuildVersionSuffix { get; set; }
+        public int? InnerVersion { get; set; } = null;
 
         public bool Release { get; set; }
 
@@ -45,7 +45,7 @@ namespace Build
 
         public DotNetCoreMSBuildSettings GetMSBuildSettings()
         {
-            return new DotNetCoreMSBuildSettings().SetVersionSuffix(BuildVersionSuffix)
+            return new DotNetCoreMSBuildSettings()
                                                   .SetConfiguration(BuildConfiguration);
         }
 
@@ -76,23 +76,20 @@ namespace Build
             EnableDocument = CommitMessage.Contains("/docs");
             EnableNuGetPackage = CommitMessage.Contains("/pkgs");
 
-            BuildVersionSuffix = context.Argument("build-version-suffix", "");
+            var actions = context.GitHubActions();
+            if (actions.IsRunningOnGitHubActions)
             {
-                var actions = context.GitHubActions();
-                if (actions.IsRunningOnGitHubActions)
+                if (actions.Environment.Workflow.Workflow == "CI")
                 {
-                    if (actions.Environment.Workflow.Workflow == "CI")
-                    {
-                        BuildVersionSuffix += $"preview.{Math.Max(1, actions.Environment.Workflow.RunNumber - BuildRunNumberOffset)}";
-                    }
-                    else if (actions.Environment.Workflow.Workflow == "Release")
-                    {
-                        Release = true;
-                    }
-                    else if (actions.Environment.Workflow.Workflow == "AutoUpdate")
-                    {
-                        AutoUpdate = true;
-                    }
+                    InnerVersion = Math.Max(1, actions.Environment.Workflow.RunNumber - BuildRunNumberOffset);
+                }
+                else if (actions.Environment.Workflow.Workflow == "Release")
+                {
+                    Release = true;
+                }
+                else if (actions.Environment.Workflow.Workflow == "AutoUpdate")
+                {
+                    AutoUpdate = true;
                 }
             }
 

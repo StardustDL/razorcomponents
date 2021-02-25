@@ -15,11 +15,10 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>StardustDL.RazorComponents.MaterialDesignIcons</PackageId>
     <Product>StardustDL.RazorComponents.MaterialDesignIcons</Product>
-    <Description>Material Design Icons for Blazor, Razor Pages and so on.</Description>
+    <Description>Material Design Icons for Blazor, Razor Pages and so on from https://materialdesignicons.com/ .</Description>
     <RootNamespace>StardustDL.RazorComponents.MaterialDesignIcons</RootNamespace>
     <AssemblyName>StardustDL.RazorComponents.MaterialDesignIcons</AssemblyName>
     <PackageTags>blazor;component-library;razor-components;icons;google-material;material-design;webfonts;razor</PackageTags>
-    <VersionPrefix>5.9.55</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>

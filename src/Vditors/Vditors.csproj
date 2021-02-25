@@ -11,11 +11,10 @@
     <Authors>StardustDL</Authors>
     <Company></Company>
     <Copyright>StardustDL</Copyright>
-    <Description>Wrapper for Vditor Blazor.</Description>
+    <Description>Wrapper for Vditor Blazor at https://b3log.org/vditor/ .</Description>
     <PackageProjectUrl>https://github.com/StardustDL/razorcomponents</PackageProjectUrl>
     <RepositoryUrl>https://github.com/StardustDL/razorcomponents</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <VersionPrefix>3.8.1</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>

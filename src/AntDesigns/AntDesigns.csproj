@@ -11,11 +11,10 @@
     <Authors>StardustDL</Authors>
     <Company></Company>
     <Copyright>StardustDL</Copyright>
-    <Description>Wrapper for AntDesign Blazor.</Description>
+    <Description>Wrapper for AntDesign Blazor at https://github.com/ant-design-blazor/ant-design-blazor.</Description>
     <PackageProjectUrl>https://github.com/StardustDL/razorcomponents</PackageProjectUrl>
     <RepositoryUrl>https://github.com/StardustDL/razorcomponents</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <VersionPrefix>0.6.0</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>

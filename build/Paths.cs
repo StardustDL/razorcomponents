@@ -30,6 +30,8 @@ namespace Build
 
         public static DirectoryPath Source => Base.Combine("src");
 
+        public static FilePath ProjectFile(string name) => Source.Combine(name).CombineWithFilePath($"{name}.csproj");
+
         public static DirectoryPath Test => Base.Combine("test");
 
         public static DirectoryPath Docs => Base.Combine("docs");
