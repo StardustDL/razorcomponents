@@ -19,7 +19,7 @@
     <RootNamespace>StardustDL.RazorComponents.MaterialDesignIcons</RootNamespace>
     <AssemblyName>StardustDL.RazorComponents.MaterialDesignIcons</AssemblyName>
     <PackageTags>blazor;component-library;razor-components;icons;google-material;material-design;webfonts;razor</PackageTags>
-    <Version>5.9.55</Version>
+    <VersionPrefix>5.9.55</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>

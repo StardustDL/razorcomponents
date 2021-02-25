@@ -89,7 +89,7 @@ namespace Build
                 {
                     if (actions.Environment.Workflow.Workflow == "CI")
                     {
-                        BuildVersionSuffix += $"-preview.{Math.Max(1, actions.Environment.Workflow.RunNumber - BuildRunNumberOffset)}";
+                        BuildVersionSuffix += $"preview.{Math.Max(1, actions.Environment.Workflow.RunNumber - BuildRunNumberOffset)}";
                     }
                     else if (actions.Environment.Workflow.Workflow == "Release")
                     {

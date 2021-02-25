@@ -15,7 +15,7 @@
     <PackageProjectUrl>https://github.com/StardustDL/razorcomponents</PackageProjectUrl>
     <RepositoryUrl>https://github.com/StardustDL/razorcomponents</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <Version>3.8.1</Version>
+    <VersionPrefix>3.8.1</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>
