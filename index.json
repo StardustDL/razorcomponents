@@ -1,8 +1,8 @@
 {
   "api/index.html": {
     "href": "api/index.html",
-    "title": "Modulight | StardustDL.RazorComponents",
-    "keywords": "Modulight"
+    "title": "StardustDL.RazorComponents | StardustDL.RazorComponents",
+    "keywords": "StardustDL.RazorComponents"
   },
   "articles/intro.html": {
     "href": "articles/intro.html",
@@ -11,7 +11,7 @@
   },
   "index.html": {
     "href": "index.html",
-    "title": "Modulight | StardustDL.RazorComponents",
-    "keywords": "Modulight"
+    "title": "StardustDL.RazorComponents | StardustDL.RazorComponents",
+    "keywords": "StardustDL.RazorComponents"
   }
 }
