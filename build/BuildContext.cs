@@ -19,8 +19,6 @@ namespace Build
 
     public class BuildContext : FrostingContext
     {
-        const string Version = "0.0.2";
-
         const int BuildRunNumberOffset = 0;
 
         public string CommitMessage { get; set; }
@@ -79,10 +77,6 @@ namespace Build
             EnableNuGetPackage = CommitMessage.Contains("/pkgs");
 
             BuildVersionSuffix = context.Argument("build-version-suffix", "");
-            if (BuildVersionSuffix is "")
-            {
-                BuildVersionSuffix = context.EnvironmentVariable("BUILD_VERSION_SUFFIX", Version);
-            }
             {
                 var actions = context.GitHubActions();
                 if (actions.IsRunningOnGitHubActions)
