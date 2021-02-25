@@ -19,6 +19,7 @@
     <RootNamespace>StardustDL.RazorComponents.MaterialDesignIcons</RootNamespace>
     <AssemblyName>StardustDL.RazorComponents.MaterialDesignIcons</AssemblyName>
     <PackageTags>blazor;component-library;razor-components;icons;google-material;material-design;webfonts;razor</PackageTags>
+    <Version>5.9.55</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.4-preview.25" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.4-preview.40" />
   </ItemGroup>
 </Project>

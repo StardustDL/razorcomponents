@@ -16,10 +16,7 @@ namespace Demo
         public static async Task Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
-
-            await using var _ = await host.Services.UseModuleHost();
-
-            await host.RunAsync();
+            await host.RunAsyncWithModules();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

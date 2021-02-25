@@ -26,7 +26,7 @@ namespace StardustDL.RazorComponents.MaterialDesignIcons
     /// <summary>
     /// Provide Material Design Icon razor components.
     /// </summary>
-    [Module(Description = "Material Design Icon Razor components.", Url = "https://materialdesignicons.com/", Author = "Austin Andrews", Version = "5.9.55")]
+    [Module(Description = "Material Design Icon Razor components.", Url = "https://materialdesignicons.com/", Author = "Austin Andrews")]
     [ModuleUIResource(UIResourceType.StyleSheet, "_content/StardustDL.RazorComponents.MaterialDesignIcons/mdi/css/materialdesignicons.min.css")]
     public class MaterialDesignIconModule : RazorComponentClientModule
     {

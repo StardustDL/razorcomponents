@@ -26,7 +26,7 @@ namespace StardustDL.RazorComponents.Vditors
     /// <summary>
     /// Provide Vditor razor components.
     /// </summary>
-    [Module(Description = "Vditor Razor components.", Url = "https://b3log.org/vditor/", Author = "B3log", Version = "3.8.1")]
+    [Module(Description = "Vditor Razor components.", Url = "https://b3log.org/vditor/", Author = "B3log")]
     [ModuleUIResource(UIResourceType.StyleSheet, "_content/StardustDL.RazorComponents.Vditors/vditor/index.css")]
     [ModuleUIResource(UIResourceType.Script, "_content/StardustDL.RazorComponents.Vditors/vditor/index.min.js")]
     [ModuleUIResource(UIResourceType.Script, "_content/Vditor/vditor-blazor.js")]

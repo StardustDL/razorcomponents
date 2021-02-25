@@ -15,6 +15,7 @@
     <PackageProjectUrl>https://github.com/StardustDL/razorcomponents</PackageProjectUrl>
     <RepositoryUrl>https://github.com/StardustDL/razorcomponents</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
+    <Version>0.6.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,7 +24,7 @@
 
   <ItemGroup>
     <PackageReference Include="AntDesign" Version="0.6.0" />
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.4-preview.25" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.4-preview.40" />
   </ItemGroup>
 
 </Project>

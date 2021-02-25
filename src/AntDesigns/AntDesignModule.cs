@@ -26,7 +26,7 @@ namespace StardustDL.RazorComponents.AntDesigns
     /// <summary>
     /// Provide Ant Design razor components.
     /// </summary>
-    [Module(Description = "AntDesign Razor components.", Url = "https://github.com/ant-design-blazor/ant-design-blazor", Author = "ant-design-blazor", Version = "0.6.0")]
+    [Module(Description = "AntDesign Razor components.", Url = "https://github.com/ant-design-blazor/ant-design-blazor", Author = "ant-design-blazor")]
     [ModuleStartup(typeof(Startup))]
     [ModuleUIResource(UIResourceType.Script, "_content/AntDesign/js/ant-design-blazor.js")]
     [ModuleUIResource(UIResourceType.StyleSheet, "_content/AntDesign/css/ant-design-blazor.css")]
