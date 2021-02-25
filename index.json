@@ -1,0 +1,17 @@
+{
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "Modulight | StardustDL.RazorComponents",
+    "keywords": "Modulight"
+  },
+  "articles/intro.html": {
+    "href": "articles/intro.html",
+    "title": "Introduction | StardustDL.RazorComponents",
+    "keywords": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Modulight | StardustDL.RazorComponents",
+    "keywords": "Modulight"
+  }
+}
