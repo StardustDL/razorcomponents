@@ -2,7 +2,7 @@ name: AutoUpdate
 
 on:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '0 4 * * *'
 
 defaults:
   run:
@@ -15,4 +15,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Update
+      env:
+        AZ_AUTH_TOKEN: ${{ secrets.AZ_TOKEN }}
+        NUGET_AUTH_TOKEN: ${{ secrets.NUGET_TOKEN }}
       run: ./build.ps1 -t autoupdate
