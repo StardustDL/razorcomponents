@@ -36,7 +36,7 @@ namespace Demo
 
             services.AddModules(builder =>
             {
-                builder.AddAntDesignModule()
+                builder.UseRazorComponentClientModules().AddAntDesignModule()
                     .AddMaterialDesignIconModule()
                     .AddVditorModule();
             });
