@@ -4,7 +4,6 @@
     <RootNamespace>StardustDL.RazorComponents.AntDesigns</RootNamespace>
     <AssemblyName>StardustDL.RazorComponents.AntDesigns</AssemblyName>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -22,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AntDesign" Version="0.7.0" />
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.2" />
+    <PackageReference Include="AntDesign" Version="0.7.1" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.4" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,8 @@
   "license": "ISC",
   "private": true,
   "dependencies": {
-    "@mdi/font": "^5.9.55"
+    "@mdi/font": "^5.9.55",
+    "@mdi/svg": "^5.9.55"
   },
   "devDependencies": {
     "@babel/core": "^7.13.8",

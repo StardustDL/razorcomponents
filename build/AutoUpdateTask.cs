@@ -48,6 +48,8 @@ namespace Build
         {
             var (v1, v2) = Context.UpdateNpmPackage(Paths.ProjectFile(nameof(MaterialDesignIcons)), "@mdi/font");
 
+            Context.UpdateNpmPackage(Paths.ProjectFile(nameof(MaterialDesignIcons)), "@mdi/svg");
+
             if (v1 != v2)
             {
                 Context.MaterialDesignIcons(true);

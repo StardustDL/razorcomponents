@@ -1,4 +1,16 @@
-﻿<span class="mdi mdi-@Type @Class" style="@Style"></span>
+﻿@inject MaterialDesignIconModule Module
+
+@switch (Module.Options.Provider)
+{
+    case MaterialDesignIconProvider.Font:
+        <span class="mdi mdi-@Type @Class" style="@Style"></span>
+        break;
+    case MaterialDesignIconProvider.Svg:
+        <span class="@Class" style="@Style">
+            <img src="_content/StardustDL.RazorComponents.MaterialDesignIcons/mdi/svg/@(Type).svg" />
+        </span>
+        break;
+}
 
 @code {
     [Parameter]
