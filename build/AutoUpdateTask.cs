@@ -28,6 +28,7 @@ namespace Build
             AntDesigns();
             Vditors();
             MaterialDesignIcons();
+            JQuerys();
         }
 
         void Vditors()
@@ -53,6 +54,34 @@ namespace Build
             if (v1 != v2)
             {
                 Context.MaterialDesignIcons(true);
+            }
+            else
+            {
+                Context.Log.Information("No update needs");
+            }
+        }
+
+        void JQuerys()
+        {
+            var (v1, v2) = Context.UpdateNpmPackage(Paths.ProjectFile(nameof(JQuerys)), "jquery");
+
+            if (v1 != v2)
+            {
+                Context.JQuerys(true);
+            }
+            else
+            {
+                Context.Log.Information("No update needs");
+            }
+        }
+
+        void Bootstraps()
+        {
+            var (v1, v2) = Context.UpdateNpmPackage(Paths.ProjectFile(nameof(Bootstraps)), "bootstrap");
+
+            if (v1 != v2)
+            {
+                Context.Bootstraps(true);
             }
             else
             {

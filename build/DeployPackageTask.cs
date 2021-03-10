@@ -20,6 +20,8 @@ namespace Build
             context.Vditors(true);
             context.AntDesigns(true);
             context.MaterialDesignIcons(true);
+            context.JQuerys(true);
+            context.Bootstraps(true);
         }
     }
 }

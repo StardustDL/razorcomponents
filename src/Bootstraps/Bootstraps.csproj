@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>StardustDL.RazorComponents.Bootstraps</RootNamespace>
+    <AssemblyName>StardustDL.RazorComponents.Bootstraps</AssemblyName>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Authors>StardustDL</Authors>
+    <Company></Company>
+    <Copyright>StardustDL</Copyright>
+    <Description>Bootstrap for Blazor, Razor Pages and so on from https://getbootstrap.com/.</Description>
+    <PackageProjectUrl>https://github.com/StardustDL/razorcomponents</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/StardustDL/razorcomponents</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.4" />
+    <PackageReference Include="Vditor" Version="0.1.0-nightly-201209082656" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>

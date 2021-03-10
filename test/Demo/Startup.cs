@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using StardustDL.RazorComponents.MaterialDesignIcons;
 using StardustDL.RazorComponents.Vditors;
 using Modulight.Modules.Hosting;
+using StardustDL.RazorComponents.JQuerys;
+using StardustDL.RazorComponents.Bootstraps;
 
 namespace Demo
 {
@@ -38,7 +40,9 @@ namespace Demo
             {
                 builder.UseRazorComponentClientModules().AddAntDesignModule()
                     .AddMaterialDesignIconModule()
-                    .AddVditorModule();
+                    .AddVditorModule()
+                    .AddJQueryModule()
+                    .AddBootstrapModule();
             });
         }
 

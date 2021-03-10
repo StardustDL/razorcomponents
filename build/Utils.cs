@@ -231,5 +231,27 @@ namespace Build
 
             if (deploy) context.Deploy(package);
         }
+
+        public static void JQuerys(this BuildContext context, bool deploy = false)
+        {
+            var project = Paths.ProjectFile(nameof(JQuerys));
+
+            var version = context.GetNpmPackageVersion(project, "jquery");
+
+            var package = context.BuildAndPack(project, version + (context.InnerVersion is null ? "" : $".{context.InnerVersion}"), nameof(JQuerys));
+
+            if (deploy) context.Deploy(package);
+        }
+
+        public static void Bootstraps(this BuildContext context, bool deploy = false)
+        {
+            var project = Paths.ProjectFile(nameof(Bootstraps));
+
+            var version = context.GetNpmPackageVersion(project, "bootstrap");
+
+            var package = context.BuildAndPack(project, version + (context.InnerVersion is null ? "" : $".{context.InnerVersion}"), nameof(Bootstraps));
+
+            if (deploy) context.Deploy(package);
+        }
     }
 }

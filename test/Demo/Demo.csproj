@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\AntDesigns\AntDesigns.csproj" />
+    <ProjectReference Include="..\..\src\Bootstraps\Bootstraps.csproj" />
+    <ProjectReference Include="..\..\src\JQuerys\JQuerys.csproj" />
     <ProjectReference Include="..\..\src\MaterialDesignIcons\MaterialDesignIcons.csproj" />
     <ProjectReference Include="..\..\src\Vditors\Vditors.csproj" />
   </ItemGroup>

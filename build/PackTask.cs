@@ -15,6 +15,8 @@ namespace Build
             context.Vditors();
             context.AntDesigns();
             context.MaterialDesignIcons();
+            context.JQuerys();
+            context.Bootstraps();
         }
     }
 }
