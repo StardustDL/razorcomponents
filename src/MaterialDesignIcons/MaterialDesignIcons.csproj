@@ -5,7 +5,6 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Nullable>enable</Nullable>
     <Authors>StardustDL</Authors>
-    <Company></Company>
     <Copyright>StardustDL</Copyright>
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/StardustDL/razorcomponents</PackageProjectUrl>
@@ -25,6 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.4" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.10" />
   </ItemGroup>
 </Project>

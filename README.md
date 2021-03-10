@@ -33,3 +33,23 @@ builder.AddVditorModule();
 ```cs
 builder.AddMaterialDesignIconModule();
 ```
+
+## JQuerys
+
+[StardustDL.RazorComponents.JQuerys](https://www.nuget.org/packages/StardustDL.RazorComponents.JQuerys)
+
+![](https://buildstats.info/nuget/StardustDL.RazorComponents.JQuerys?includePreReleases=true)
+
+```cs
+builder.AddJQueryModule();
+```
+
+## Bootstraps
+
+[StardustDL.RazorComponents.Bootstraps](https://www.nuget.org/packages/StardustDL.RazorComponents.Bootstraps)
+
+![](https://buildstats.info/nuget/StardustDL.RazorComponents.Bootstraps?includePreReleases=true)
+
+```cs
+builder.AddBootstrapModule();
+```

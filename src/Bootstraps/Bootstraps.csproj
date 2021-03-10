@@ -4,7 +4,6 @@
     <RootNamespace>StardustDL.RazorComponents.Bootstraps</RootNamespace>
     <AssemblyName>StardustDL.RazorComponents.Bootstraps</AssemblyName>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -22,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.4" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.10" />
     <PackageReference Include="Vditor" Version="0.1.0-nightly-201209082656" />
   </ItemGroup>
 
