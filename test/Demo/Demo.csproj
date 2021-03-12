@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.10" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.13" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web.Extensions" Version="5.0.0-preview9.20513.1" />
-    <PackageReference Include="Modulight.Modules.Server.AspNet" Version="0.0.5-preview.10" />
+    <PackageReference Include="Modulight.Modules.Server.AspNet" Version="0.0.5-preview.13" />
   </ItemGroup>
 
   <ItemGroup>

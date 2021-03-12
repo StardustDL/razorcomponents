@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>StardustDL.RazorComponents.JQuerys</RootNamespace>
     <AssemblyName>StardustDL.RazorComponents.JQuerys</AssemblyName>
     <Nullable>enable</Nullable>
@@ -17,11 +18,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="package-lock.json" />
+    <Content Remove="package.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="package-lock.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="package.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.10" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.13" />
   </ItemGroup>
 
   <ItemGroup>

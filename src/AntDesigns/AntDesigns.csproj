@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>StardustDL.RazorComponents.AntDesigns</RootNamespace>
     <AssemblyName>StardustDL.RazorComponents.AntDesigns</AssemblyName>
     <Nullable>enable</Nullable>
@@ -22,7 +23,7 @@
 
   <ItemGroup>
     <PackageReference Include="AntDesign" Version="0.7.1" />
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.10" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5-preview.13" />
   </ItemGroup>
 
 </Project>
