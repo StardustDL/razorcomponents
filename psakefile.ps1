@@ -22,17 +22,21 @@ Task NPMUP {
     Set-Location src/MaterialDesignIcons
     Exec { ncu -u }
     Exec { npm i }
+    npm audit fix
     Set-Location ../..
     Set-Location src/Vditors
     Exec { ncu -u }
     Exec { npm i }
+    npm audit fix
     Set-Location ../..
     Set-Location src/JQuerys
     Exec { ncu -u }
     Exec { npm i }
+    npm audit fix
     Set-Location ../..
     Set-Location src/Bootstraps
     Exec { ncu -u }
     Exec { npm i }
+    npm audit fix
     Set-Location ../..
 }
