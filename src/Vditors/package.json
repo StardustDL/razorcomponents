@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vditor": "^3.8.4"
+    "vditor": "^3.8.5"
   },
   "devDependencies": {
     "gulp": "^4.0.2"

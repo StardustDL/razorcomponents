@@ -13,8 +13,8 @@
     "@mdi/svg": "^5.9.55"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.14",
-    "@babel/preset-env": "^7.13.12",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
     "browserify": "^17.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",

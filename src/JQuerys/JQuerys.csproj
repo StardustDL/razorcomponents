@@ -15,7 +15,7 @@
     <PackageProjectUrl>https://github.com/StardustDL/razorcomponents</PackageProjectUrl>
     <RepositoryUrl>https://github.com/StardustDL/razorcomponents</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <PackageTags>blazor;razor-components;razor</PackageTags>
+    <PackageTags>blazor;razor-components;razor;jquery</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,7 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.5" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.6" />
   </ItemGroup>
 
   <ItemGroup>
