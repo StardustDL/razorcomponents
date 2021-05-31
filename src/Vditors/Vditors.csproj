@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.6" />
+    <PackageReference Include="Modulight.Modules.Client.RazorComponents" Version="0.0.7" />
     <PackageReference Include="Vditor" Version="0.1.0-nightly-201209082656" />
   </ItemGroup>
 
