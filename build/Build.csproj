@@ -11,6 +11,6 @@
 		<PackageReference Include="Cake.Frosting" Version="1.1.0" />
 		<PackageReference Include="Cake.Gulp" Version="1.0.0" />
 		<PackageReference Include="Cake.Issues.PullRequests.GitHubActions" Version="0.9.0" />
-		<PackageReference Include="Cake.Npm" Version="1.0.0" />
+		<PackageReference Include="Cake.Npm" Version="2.0.0" />
 	</ItemGroup>
 </Project>
